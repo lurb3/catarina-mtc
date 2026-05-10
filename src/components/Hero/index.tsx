@@ -17,7 +17,7 @@ const Hero = () => {
                 <p className="mb-12 text-base leading-relaxed! text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                   Acupunctura, fitoterapia e terapias holísticas para restaurar
                   o equilíbrio do corpo e da mente. Cuidado personalizado por
-                  [Nome do Profissional], com mais de [X] anos de experiência
+                  Catarina Abreu, com mais de [X] anos de experiência
                   ao serviço da sua saúde.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">

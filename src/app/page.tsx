@@ -8,9 +8,9 @@ import Treatments from "@/components/Treatments";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "[Nome do Profissional] | Medicina Tradicional Chinesa em [Cidade]",
+  title: "Catarina Abreu | Medicina Tradicional Chinesa",
   description:
-    "Consultas de Medicina Tradicional Chinesa em [Cidade]: acupunctura, fitoterapia, Tui Ná, moxabustão e ventosas. Marcação online.",
+    "Consultas de Medicina Tradicional Chinesa em Gondomar: acupunctura, fitoterapia, Tui Ná, moxabustão e ventosas",
 };
 
 // Check if we're in production (used to show construction page)
