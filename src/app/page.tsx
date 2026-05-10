@@ -10,7 +10,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Catarina Abreu | Medicina Tradicional Chinesa",
   description:
-    "Consultas de Medicina Tradicional Chinesa em Gondomar: acupunctura, fitoterapia, Tui Ná, moxabustão e ventosas",
+    "Consultas de Medicina Tradicional Chinesa: acupunctura, fitoterapia, Tui Ná, moxabustão e ventosas",
 };
 
 // Check if we're in production (used to show construction page)
@@ -29,7 +29,7 @@ export default function Home() {
           </p>
           <div className="animate-pulse text-6xl">🏗️</div>
           <p className="mt-8 text-sm text-gray-400">
-            Medicina Tradicional Chinesa em Gondomar
+            Medicina Tradicional Chinesa
           </p>
         </div>
       </main>

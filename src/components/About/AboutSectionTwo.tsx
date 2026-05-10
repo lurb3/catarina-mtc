@@ -41,7 +41,7 @@ const AboutSectionTwo = () => {
                   Formação e experiência
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  [Nome do Profissional] é [acupunctor / fitoterapeuta]
+                  Catarina Abreu é [acupunctor / fitoterapeuta]
                   certificado pela [Instituição], com [X] anos de prática
                   clínica e formação complementar na China.
                 </p>
