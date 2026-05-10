@@ -1,15 +1,20 @@
 /**
  * Sanity Studio embedded at /studio
- *
- * Configurada via `sanity.config.ts` na raiz do projecto.
+ * Rendered client-side only to avoid "window is not defined" error
  */
 
-import { NextStudio } from "next-sanity/studio";
-import config from "../../../../sanity.config";
+import { Metadata, Viewport } from "next";
+import { metadata as studioMetadata, viewport as studioViewport } from "next-sanity/studio";
+import { Suspense } from "react";
+import StudioLoader from "./StudioLoader";
 
-export const dynamic = "force-static";
-export { metadata, viewport } from "next-sanity/studio";
+export const metadata: Metadata = studioMetadata;
+export const viewport = studioViewport;
 
 export default function StudioPage() {
-  return <NextStudio config={config} />;
+  return (
+    <Suspense fallback={<div>Loading Studio...</div>}>
+      <StudioLoader />
+    </Suspense>
+  );
 }
