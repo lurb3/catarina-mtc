@@ -15,26 +15,10 @@ const LeafIcon = (
     <path d="M2 22c4-3 7-7 9-13" />
   </svg>
 );
-const HandIcon = (
-  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M18 11V6a2 2 0 0 0-4 0v5" />
-    <path d="M14 10V4a2 2 0 0 0-4 0v6" />
-    <path d="M10 10.5V6a2 2 0 0 0-4 0v8" />
-    <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
-  </svg>
-);
 const FlameIcon = (
   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
     <path d="M8.5 14.5A2.5 2.5 0 0 0 11 17c1.5 0 2.5-1 2.5-2.5 0-1-.5-1.5-1-2-1-1-1.5-2-1-3 .5-1 0-2-.5-3-2 1-3 3-3 5 0 1 0 2 .5 3 .5 1 0 2-.5 2.5z" />
     <path d="M12 2c1 1 2 3 2 5 0 1-.5 2-1 3 1 1 2 2 2 4 0 2.5-2 4.5-5 4.5S5 16.5 5 14c0-2 1-4 3-6 1-1 2-3 2-4 1 0 2-1 2-2z" />
-  </svg>
-);
-const CupIcon = (
-  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M5 4h14v6a7 7 0 0 1-14 0V4Z" />
-    <path d="M3 4h18" />
-    <path d="M12 17v4" />
-    <path d="M8 21h8" />
   </svg>
 );
 const EarIcon = (
@@ -51,6 +35,8 @@ const treatmentsData: Treatment[] = [
     title: "Acupunctura",
     paragraph:
       "Estimulação de pontos energéticos com agulhas finas para aliviar dores, reduzir o stress e equilibrar a circulação de Qi no corpo.",
+    image:
+      "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 2,
@@ -58,13 +44,8 @@ const treatmentsData: Treatment[] = [
     title: "Fitoterapia Chinesa",
     paragraph:
       "Fórmulas de plantas medicinais personalizadas a cada paciente, complementando a acupunctura no tratamento de patologias crónicas e agudas.",
-  },
-  {
-    id: 3,
-    icon: HandIcon,
-    title: "Tui Ná",
-    paragraph:
-      "Massagem terapêutica chinesa que combina pressão, alongamento e mobilizações para libertar tensões musculares e articulares.",
+    image:
+      "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 4,
@@ -72,13 +53,8 @@ const treatmentsData: Treatment[] = [
     title: "Moxabustão",
     paragraph:
       "Aplicação de calor com a planta Artemísia em pontos específicos, indicada em quadros de frio interno, fadiga e dores crónicas.",
-  },
-  {
-    id: 5,
-    icon: CupIcon,
-    title: "Ventosas",
-    paragraph:
-      "Técnica de sucção que ajuda a desbloquear estagnações, melhorar a circulação sanguínea e aliviar contracturas musculares.",
+    image:
+      "https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: 6,
@@ -86,6 +62,8 @@ const treatmentsData: Treatment[] = [
     title: "Auriculoterapia",
     paragraph:
       "Estimulação de pontos reflexos do pavilhão auricular, útil no controlo da ansiedade, insónia, dependências e gestão do peso.",
+    image:
+      "https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=800&q=80",
   },
 ];
 

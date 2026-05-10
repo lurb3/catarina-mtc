@@ -1,6 +1,5 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Blog from "@/components/Blog";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
@@ -13,22 +12,18 @@ export const metadata: Metadata = {
     "Consultas de Medicina Tradicional Chinesa: acupunctura, fitoterapia, Tui Ná, moxabustão e ventosas",
 };
 
-// Check if we're in production (used to show construction page)
 const isProduction = process.env.VERCEL_ENV === "production";
 
 export default function Home() {
-  // Show construction page in production
   if (isProduction) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center bg-white px-4">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-[#2D352C] px-4 text-[#E6E1D2]">
         <div className="text-center">
-          <h1 className="mb-4 text-4xl font-bold text-black">Em Construção</h1>
-          <p className="mb-8 text-lg text-gray-600">
-            O nosso website está a ser preparado.
-            <br />
+          <h1 className="mb-4 font-serif text-4xl">Em Construção</h1>
+          <p className="mb-8 text-lg text-[#B5BFAB]">
+            O website está a ser preparado.
           </p>
-          <div className="animate-pulse text-6xl">🏗️</div>
-          <p className="mt-8 text-sm text-gray-400">
+          <p className="mt-8 text-sm text-[#959D8D]">
             Medicina Tradicional Chinesa
           </p>
         </div>
@@ -36,7 +31,6 @@ export default function Home() {
     );
   }
 
-  // Show full site in development
   return (
     <>
       <ScrollUp />
@@ -44,7 +38,6 @@ export default function Home() {
       <AboutSectionOne />
       <Treatments />
       <AboutSectionTwo />
-      <Blog />
       <Contact />
     </>
   );

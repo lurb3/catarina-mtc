@@ -1,21 +1,30 @@
+import Image from "next/image";
 import { Treatment } from "@/types/treatment";
 
 const SingleTreatment = ({ treatment }: { treatment: Treatment }) => {
-  const { icon, title, paragraph } = treatment;
+  const { icon, title, paragraph, image } = treatment;
+
   return (
-    <div className="w-full">
-      <div className="wow fadeInUp" data-wow-delay=".15s">
-        <div className="bg-primary/10 text-primary mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md">
-          {icon}
-        </div>
-        <h3 className="mb-5 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
-          {title}
-        </h3>
-        <p className="text-body-color pr-[10px] text-base leading-relaxed font-medium">
-          {paragraph}
-        </p>
+    <article className="group overflow-hidden rounded-2xl bg-[#2D352C] transition hover:bg-[#1F2620] hover:shadow-2xl">
+      <div className="relative aspect-[4/5] overflow-hidden">
+        {image ? (
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover transition duration-700 group-hover:scale-105"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-[#4B544A] text-[#E6CFB8]">
+            {icon}
+          </div>
+        )}
       </div>
-    </div>
+      <div className="p-6">
+        <h3 className="mb-2 font-serif text-xl text-[#E6CFB8]">{title}</h3>
+        <p className="text-sm leading-relaxed text-[#B5BFAB]">{paragraph}</p>
+      </div>
+    </article>
   );
 };
 

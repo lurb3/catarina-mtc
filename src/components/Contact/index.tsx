@@ -1,84 +1,28 @@
-import ClinicInfoBox from "./ClinicInfoBox";
+import Link from "next/link";
 
 const Contact = () => {
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
-            <div
-              className="mb-12 rounded-xs bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
-              data-wow-delay=".15s
-              "
-            >
-              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                Marque a sua consulta
-              </h2>
-              <p className="mb-12 text-base font-medium text-body-color">
-                Preencha o formulário e entraremos em contacto consigo no
-                prazo de 24 horas para confirmar a marcação.
-              </p>
-              <form>
-                <div className="-mx-4 flex flex-wrap">
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="name"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        O seu nome
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Indique o seu nome"
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="email"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        O seu email
-                      </label>
-                      <input
-                        type="email"
-                        placeholder="Indique o seu email"
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="message"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Mensagem
-                      </label>
-                      <textarea
-                        name="message"
-                        rows={5}
-                        placeholder="Descreva brevemente o motivo da consulta"
-                        className="border-stroke w-full resize-none rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <button className="rounded-xs bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
-                      Enviar pedido
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <ClinicInfoBox />
-          </div>
-        </div>
+    <section
+      id="contact"
+      className="relative overflow-hidden bg-[#C7CFC0] px-6 py-32 md:px-12"
+    >
+      <div className="mx-auto max-w-4xl text-center">
+        <p className="mb-6 text-sm uppercase tracking-[0.3em] text-[#6C7463]">
+          Vamos começar
+        </p>
+        <h2 className="mb-8 font-serif text-4xl leading-tight text-[#2D352C] md:text-6xl">
+          O primeiro passo é <em className="italic">ouvir-se</em>.
+        </h2>
+        <p className="mx-auto mb-12 max-w-xl text-lg text-[#4B544A]">
+          Marque uma primeira avaliação para conversarmos sobre o que procura
+          e desenharmos o plano certo para si.
+        </p>
+        <Link
+          href="mailto:catarina@example.com"
+          className="inline-block rounded-full bg-[#2D352C] px-10 py-5 text-lg text-[#E6E1D2] transition hover:bg-[#4B544A]"
+        >
+          Marcar Consulta
+        </Link>
       </div>
     </section>
   );

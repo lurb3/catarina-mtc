@@ -3,4 +3,5 @@ export type Treatment = {
   icon: React.ReactNode;
   title: string;
   paragraph: string;
+  image?: string;
 };
