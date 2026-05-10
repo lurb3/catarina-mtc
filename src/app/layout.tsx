@@ -8,6 +8,9 @@ import "../styles/index.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Check if we're in production
+const isProduction = process.env.NEXT_PUBLIC_VERCEL_ENV === "production";
+
 export default function RootLayout({
   children,
 }: {
@@ -15,20 +18,16 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="pt-PT">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
           <div className="isolate">
-            <Header />
+            {!isProduction && <Header />}
             {children}
-            <Footer />
+            {!isProduction && <Footer />}
           </div>
-          <ScrollToTop />
+          {!isProduction && <ScrollToTop />}
         </Providers>
       </body>
     </html>
