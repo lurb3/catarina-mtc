@@ -36,7 +36,7 @@ const components: PortableTextComponents = {
         return (
           <Link
             href={href}
-            className="text-primary underline hover:opacity-80"
+            className="text-[#6C7463] underline hover:opacity-80"
           >
             {children}
           </Link>
@@ -47,7 +47,7 @@ const components: PortableTextComponents = {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary underline hover:opacity-80"
+          className="text-[#6C7463] underline hover:opacity-80"
         >
           {children}
         </a>
@@ -56,34 +56,34 @@ const components: PortableTextComponents = {
   },
   block: {
     h2: ({ children }) => (
-      <h2 className="mt-10 mb-5 text-2xl font-bold text-black sm:text-3xl dark:text-white">
+      <h2 className="mt-10 mb-5 text-2xl font-bold text-[#2D352C] sm:text-3xl">
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="mt-8 mb-4 text-xl font-bold text-black sm:text-2xl dark:text-white">
+      <h3 className="mt-8 mb-4 text-xl font-bold text-[#2D352C] sm:text-2xl">
         {children}
       </h3>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="bg-primary/10 my-8 rounded-md border-l-4 border-primary px-6 py-4 italic text-body-color">
+      <blockquote className="bg-[#2D352C]/5 my-8 rounded-md border-l-4 border-[#6C7463] px-6 py-4 italic text-[#4B544A]">
         {children}
       </blockquote>
     ),
     normal: ({ children }) => (
-      <p className="text-body-color mb-6 text-base leading-relaxed sm:text-lg sm:leading-relaxed">
+      <p className="text-[#4B544A] mb-6 text-base leading-relaxed sm:text-lg sm:leading-relaxed">
         {children}
       </p>
     ),
   },
   list: {
     bullet: ({ children }) => (
-      <ul className="text-body-color mb-6 list-inside list-disc space-y-2">
+      <ul className="text-[#4B544A] mb-6 list-inside list-disc space-y-2">
         {children}
       </ul>
     ),
     number: ({ children }) => (
-      <ol className="text-body-color mb-6 list-inside list-decimal space-y-2">
+      <ol className="text-[#4B544A] mb-6 list-inside list-decimal space-y-2">
         {children}
       </ol>
     ),

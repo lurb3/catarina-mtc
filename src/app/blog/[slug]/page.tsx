@@ -65,11 +65,11 @@ const BlogDetailsPage = async ({
       <div className="container">
         <div className="-mx-4 flex flex-wrap justify-center">
           <div className="w-full px-4 lg:w-8/12">
-            <h1 className="mb-8 text-3xl leading-tight font-bold text-black sm:text-4xl sm:leading-tight dark:text-white">
+            <h1 className="mb-8 text-3xl leading-tight font-bold text-[#2D352C] sm:text-4xl sm:leading-tight">
               {title}
             </h1>
 
-            <div className="border-body-color/10 mb-10 flex flex-wrap items-center justify-between border-b pb-4 dark:border-white/10">
+            <div className="mb-10 flex flex-wrap items-center justify-between border-b border-[#2D352C]/20 pb-4">
               <div className="flex flex-wrap items-center">
                 {author?.name && (
                   <div className="mr-10 mb-5 flex items-center">
@@ -80,10 +80,10 @@ const BlogDetailsPage = async ({
                         </div>
                       </div>
                     )}
-                    <span className="text-body-color text-base font-medium">
+                    <span className="text-[#4B544A] text-base font-medium">
                       Por <span>{author.name}</span>
                       {author.role && (
-                        <span className="text-body-color/60 ml-1 text-sm">
+                        <span className="text-[#6C7463] ml-1 text-sm">
                           · {author.role}
                         </span>
                       )}
@@ -91,14 +91,14 @@ const BlogDetailsPage = async ({
                   </div>
                 )}
                 {publishedAt && (
-                  <p className="text-body-color mr-5 mb-5 text-base font-medium">
+                  <p className="text-[#4B544A] mr-5 mb-5 text-base font-medium">
                     {formatDate(publishedAt)}
                   </p>
                 )}
               </div>
               {categories?.[0] && (
                 <div className="mb-5">
-                  <span className="bg-primary inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-white">
+                  <span className="bg-[#2D352C] inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-[#E6E1D2]">
                     {categories[0].title}
                   </span>
                 </div>
@@ -119,7 +119,7 @@ const BlogDetailsPage = async ({
             )}
 
             {excerpt && (
-              <p className="text-body-color mb-10 text-lg leading-relaxed font-medium italic sm:text-xl">
+              <p className="text-[#4B544A] mb-10 text-lg leading-relaxed font-medium italic sm:text-xl">
                 {excerpt}
               </p>
             )}

@@ -21,7 +21,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="pt-PT">
       <head />
 
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+      <body className={`bg-[#C7CFC0] ${inter.className}`}>
         <Providers>
           <div className="isolate">
             {!isProduction && <Header />}

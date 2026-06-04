@@ -27,13 +27,13 @@ const BlogPage = async () => {
       <section className="pt-[120px] pb-[120px]">
         <div className="container">
           {posts.length === 0 ? (
-            <div className="text-body-color mx-auto max-w-2xl text-center">
+            <div className="text-[#4B544A] mx-auto max-w-2xl text-center">
               <p className="text-lg">
                 Ainda não há artigos publicados. Volte em breve!
               </p>
               <p className="mt-2 text-sm">
                 (Os artigos são geridos no Sanity Studio em{" "}
-                <code className="bg-primary/10 text-primary rounded px-1.5 py-0.5">
+                <code className="bg-[#2D352C]/10 text-[#2D352C] rounded px-1.5 py-0.5">
                   /studio
                 </code>
                 .)
