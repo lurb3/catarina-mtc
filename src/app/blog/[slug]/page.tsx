@@ -1,6 +1,7 @@
 import PortableContent from "@/components/Blog/PortableContent";
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
+import BlogPostingJsonLd from "@/components/JsonLd/BlogPostingJsonLd";
 import { safeFetch } from "@/sanity/lib/fetch";
 import {
   POSTS_SLUGS_QUERY,
@@ -32,9 +33,35 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = await safeFetch<BlogPostFull | null>(POST_QUERY, { slug }, null);
   if (!post) return { title: "Artigo não encontrado" };
+
+  const url = `https://catarinaabreumtc.com/blog/${slug}`;
+
   return {
-    title: `${post.title} | Blog`,
+    title: post.title,
     description: post.excerpt,
+    alternates: { canonical: url },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt ?? undefined,
+      url,
+      type: "article",
+      ...(post.publishedAt && {
+        publishedTime: post.publishedAt,
+        modifiedTime: post.publishedAt,
+      }),
+      authors: post.author?.name
+        ? [`https://catarinaabreumtc.com/about`]
+        : undefined,
+      images: post.mainImage
+        ? [{ url: post.mainImage, width: 1200, height: 630, alt: post.title }]
+        : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt ?? undefined,
+      images: post.mainImage ? [post.mainImage] : undefined,
+    },
   };
 }
 
@@ -62,6 +89,7 @@ const BlogDetailsPage = async ({
 
   return (
     <section className="pt-[150px] pb-[120px]">
+      <BlogPostingJsonLd post={post} slug={slug} />
       <div className="container">
         <div className="-mx-4 flex flex-wrap justify-center">
           <div className="w-full px-4 lg:w-8/12">
