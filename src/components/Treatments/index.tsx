@@ -18,18 +18,21 @@ const Treatments = () => {
               Cuidado <em className="italic">personalizado</em> para cada pessoa
             </h2>
           </div>
-          <Link
-            href="#contact"
-            className="text-sm uppercase tracking-widest text-[#E6CFB8] underline-offset-4 hover:underline"
-          >
-            Marcar avaliação →
-          </Link>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {treatmentsData.map((treatment) => (
             <SingleTreatment key={treatment.id} treatment={treatment} />
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-end">
+          <Link
+            href="/consultas"
+            className="text-sm uppercase tracking-widest text-[#E6CFB8] underline-offset-4 hover:underline"
+          >
+            Saber Mais →
+          </Link>
         </div>
       </div>
     </section>

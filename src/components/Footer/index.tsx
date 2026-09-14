@@ -26,7 +26,7 @@ const Footer = () => {
               bem-estar
             </p>
             <div className="flex items-center gap-4">
-              <SocialLink href="https://instagram.com" label="Instagram">
+              <SocialLink href="https://www.instagram.com/catarinaabreumtc" label="Instagram">
                 <svg
                   width="18"
                   height="18"
@@ -42,21 +42,7 @@ const Footer = () => {
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                 </svg>
               </SocialLink>
-              <SocialLink href="https://facebook.com" label="Facebook">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-              </SocialLink>
-              <SocialLink href="mailto:contacto@exemplo.pt" label="Email">
+              <SocialLink href="mailto:catarinaabreumtc@gmail.com" label="Email">
                 <svg
                   width="18"
                   height="18"
@@ -74,16 +60,14 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Navegação */}
+          {/* Licenças e Cédulas */}
           <div>
             <h3 className="mb-6 text-xs uppercase tracking-[0.25em] text-[#E6CFB8]">
-              Navegação
+              Licenças e Cédulas
             </h3>
             <ul className="space-y-3 text-sm">
-              <FooterLink href="/#about">Sobre</FooterLink>
-              <FooterLink href="/#treatments">Tratamentos</FooterLink>
-              <FooterLink href="/#philosophy">Filosofia</FooterLink>
-              <FooterLink href="/#contact">Contacto</FooterLink>
+            <p className="text-sm leading-relaxed text-[#959D8D]">Especialista de Medicina Tradicional Chinesa - C0062366</p>
+            <p className="text-sm leading-relaxed text-[#959D8D]">Especialista de Fitoterapia - C0040836</p>
             </ul>
           </div>
 
@@ -98,18 +82,17 @@ const Footer = () => {
                   href="tel:+351000000000"
                   className="text-[#B5BFAB] transition hover:text-[#E6CFB8]"
                 >
-                  +351 000 000 000
+                  918 844 601
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contacto@exemplo.pt"
+                  href="mailto:catarinaabreumtc@gmail.com"
                   className="text-[#B5BFAB] transition hover:text-[#E6CFB8]"
                 >
-                  contacto@exemplo.pt
+                  catarinaabreumtc@gmail.com
                 </a>
               </li>
-              <li className="text-[#959D8D]">Rua Exemplo</li>
             </ul>
           </div>
         </div>
@@ -124,10 +107,10 @@ const Footer = () => {
             reservados.
           </p>
           <div className="flex gap-6">
-            <Link href="/" className="transition hover:text-[#E6CFB8]">
+            <Link href="/privacidade" className="transition hover:text-[#E6CFB8]">
               Privacidade
             </Link>
-            <Link href="/" className="transition hover:text-[#E6CFB8]">
+            <Link href="/cookies" className="transition hover:text-[#E6CFB8]">
               Cookies
             </Link>
             <Link href="/" className="transition hover:text-[#E6CFB8]">

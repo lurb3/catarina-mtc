@@ -10,10 +10,12 @@ const AboutSectionTwo = () => {
       <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-2 lg:items-center">
         <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
           <Image
-            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80"
-            alt=""
+            src="/images/catarina-abreu-mtc.jpeg"
+            alt="Catarina Abreu"
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
+            unoptimized
           />
         </div>
         <div>
@@ -45,7 +47,7 @@ const AboutSectionTwo = () => {
             </li>
           </ul>
           <Link
-            href="#contact"
+            href="/perfil-clinico"
             className="inline-block rounded-full bg-[#E6CFB8] px-8 py-4 text-[#2D352C] transition hover:bg-[#E6E1D2]"
           >
             Conhecer Catarina
