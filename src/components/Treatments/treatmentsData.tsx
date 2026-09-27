@@ -21,10 +21,11 @@ const FlameIcon = (
     <path d="M12 2c1 1 2 3 2 5 0 1-.5 2-1 3 1 1 2 2 2 4 0 2.5-2 4.5-5 4.5S5 16.5 5 14c0-2 1-4 3-6 1-1 2-3 2-4 1 0 2-1 2-2z" />
   </svg>
 );
-const EarIcon = (
+const CupIcon = (
   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 4-6 8.5a3 3 0 0 1-6 0" />
-    <path d="M9 8.5a3.5 3.5 0 1 1 7 0c0 3.5-3 3-3 5.5" />
+    <path d="M9 4h6" />
+    <path d="M10 4v2a7 7 0 0 0-5 6.7V18h14v-5.3A7 7 0 0 0 14 6V4" />
+    <path d="M3 20h18" />
   </svg>
 );
 
@@ -35,17 +36,15 @@ const treatmentsData: Treatment[] = [
     title: "Acupunctura",
     paragraph:
       "Estimulação de pontos energéticos com agulhas finas para aliviar dores, reduzir o stress e equilibrar a circulação de Qi no corpo.",
-    image:
-      "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80",
+    image: "/images/tratamentos/acupuntura.jpg",
   },
   {
     id: 2,
     icon: LeafIcon,
-    title: "Fitoterapia Chinesa",
+    title: "Dietoterapia e Fitoterapia",
     paragraph:
       "Fórmulas de plantas medicinais personalizadas a cada paciente, complementando a acupunctura no tratamento de patologias crónicas e agudas.",
-    image:
-      "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=800&q=80",
+    image: "/images/tratamentos/dietoterapia.jpg",
   },
   {
     id: 4,
@@ -53,17 +52,15 @@ const treatmentsData: Treatment[] = [
     title: "Moxabustão",
     paragraph:
       "Aplicação de calor com a planta Artemísia em pontos específicos, indicada em quadros de frio interno, fadiga e dores crónicas.",
-    image:
-      "https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&fit=crop&w=800&q=80",
+    image: "/images/tratamentos/moxabustao.jpg",
   },
   {
     id: 6,
-    icon: EarIcon,
-    title: "Auriculoterapia",
+    icon: CupIcon,
+    title: "Ventosaterapia",
     paragraph:
-      "Estimulação de pontos reflexos do pavilhão auricular, útil no controlo da ansiedade, insónia, dependências e gestão do peso.",
-    image:
-      "https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=800&q=80",
+      "Aplicação de ventosas que criam uma suave sucção sobre a pele, estimulando a circulação local e aliviando tensões e contraturas musculares.",
+    image: "/images/tratamentos/ventosaterapia.jpg",
   },
 ];
 

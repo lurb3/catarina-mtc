@@ -20,5 +20,8 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: "/((?!api|_next/static|_next/image|favicon.ico).*)",
+  // Skip API routes, Next internals and any path with a file extension
+  // (public images, robots.txt, sitemap.xml) — the image optimizer fetches
+  // local images internally via 127.0.0.1, so redirecting them breaks next/image.
+  matcher: "/((?!api|_next/static|_next/image|.*\\..*).*)",
 };

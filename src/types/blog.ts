@@ -20,6 +20,7 @@ export type BlogPost = {
   slug: string;
   excerpt?: string;
   mainImage?: string | null;
+  mainImageAlt?: string | null;
   publishedAt?: string;
   categories?: BlogCategory[];
   author?: BlogAuthor;
@@ -30,4 +31,5 @@ export type BlogPost = {
  */
 export type BlogPostFull = BlogPost & {
   body?: unknown;
+  _updatedAt?: string;
 };

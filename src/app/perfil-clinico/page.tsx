@@ -2,9 +2,10 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Perfil Clínico | Catarina Abreu — Medicina Tradicional Chinesa",
+  title: "Perfil Clínico",
   description:
     "Conheça Catarina Abreu, especialista em Medicina Tradicional Chinesa e Fitoterapia com cédula profissional reconhecida pela ACSS.",
+  alternates: { canonical: "/perfil-clinico" },
 };
 
 // ─── Purpose / Values / Vision ───────────────────────────────────────────────
@@ -71,7 +72,7 @@ const pillars = [
         <circle cx="12" cy="12" r="3" />
       </svg>
     ),
-    text: "Ser uma referência na integração da Medicina Tradicional Chinesa com a investigação científica, contribuindo para um sistema de saúde mais holístico, acessível e humano.",
+    text: "Ser uma referência na união da Medicina Tradicional Chinesa com o rigor da investigação científica, contribuindo para uma medicina de excelência que seja mais humana, universal e centrada na pessoa.",
   },
 ];
 
@@ -106,7 +107,7 @@ const milestones = [
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-export default function PerfilClinicoPage() {
+export default function ClinicalProfilePage() {
   return (
     <>
       {/* ── Hero ── */}
@@ -126,7 +127,7 @@ export default function PerfilClinicoPage() {
                 <em className="font-normal italic text-[#4B544A]">Catarina</em>
               </h1>
               <p className="mb-4 text-base leading-relaxed text-[#4B544A]">
-                Tenho 28 anos e sou especialista em{" "}
+                Tenho 29 anos e sou especialista em{" "}
                 <strong className="font-medium text-[#2D352C]">
                   Medicina Tradicional Chinesa
                 </strong>{" "}
@@ -144,7 +145,7 @@ export default function PerfilClinicoPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/#contact"
+                  href="/marcar-consulta"
                   className="rounded-full bg-[#2D352C] px-8 py-4 text-base text-[#E6E1D2] transition hover:bg-[#4B544A]"
                 >
                   Marcar Consulta
@@ -168,27 +169,34 @@ export default function PerfilClinicoPage() {
                   {[
                     {
                       label: "Especialidade",
-                      value: "Medicina Tradicional Chinesa & Fitoterapia",
+                      values: ["Medicina Tradicional Chinesa & Fitoterapia"],
                     },
-                    { label: "Cédula", value: "Reconhecida pela ACSS" },
+                    {
+                      label: "Licenças e Cédulas",
+                      values: [
+                        "Medicina Tradicional Chinesa — C0062366",
+                        "Fitoterapia — C0040836",
+                        "Licença ERS — E182343",
+                      ],
+                    },
                     {
                       label: "Formação",
-                      value: "Pós-Graduação — Atlântico Business School",
+                      values: ["Pós-Graduação — Atlântico Business School"],
                     },
                     {
                       label: "Investigação",
-                      value: "3 artigos científicos (autora principal em 2)",
-                    },
-                    {
-                      label: "Formação anterior",
-                      value: "Contabilista Certificada (2022)",
+                      values: ["3 artigos científicos (autora principal em 2)"],
                     },
                   ].map((item) => (
                     <li key={item.label} className="border-b border-[#4B544A]/40 pb-5 last:border-0 last:pb-0">
                       <p className="mb-1 text-xs text-[#959D8D]">
                         {item.label}
                       </p>
-                      <p className="text-sm text-[#E6E1D2]">{item.value}</p>
+                      {item.values.map((value) => (
+                        <p key={value} className="text-sm text-[#E6E1D2]">
+                          {value}
+                        </p>
+                      ))}
                     </li>
                   ))}
                 </ul>
@@ -403,7 +411,7 @@ export default function PerfilClinicoPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="/#contact"
+                href="/marcar-consulta"
                 className="inline-block rounded-full bg-[#E6CFB8] px-10 py-4 text-base text-[#2D352C] transition hover:bg-[#E6E1D2]"
               >
                 Marcar Consulta

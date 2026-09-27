@@ -47,13 +47,20 @@ export async function generateMetadata({
       type: "article",
       ...(post.publishedAt && {
         publishedTime: post.publishedAt,
-        modifiedTime: post.publishedAt,
+        modifiedTime: post._updatedAt ?? post.publishedAt,
       }),
       authors: post.author?.name
-        ? [`https://catarinaabreumtc.com/about`]
+        ? [`https://catarinaabreumtc.com/perfil-clinico`]
         : undefined,
       images: post.mainImage
-        ? [{ url: post.mainImage, width: 1200, height: 630, alt: post.title }]
+        ? [
+            {
+              url: post.mainImage,
+              width: 1200,
+              height: 630,
+              alt: post.mainImageAlt || post.title,
+            },
+          ]
         : undefined,
     },
     twitter: {
@@ -84,8 +91,16 @@ const BlogDetailsPage = async ({
 
   if (!post) notFound();
 
-  const { title, mainImage, author, publishedAt, categories, body, excerpt } =
-    post;
+  const {
+    title,
+    mainImage,
+    mainImageAlt,
+    author,
+    publishedAt,
+    categories,
+    body,
+    excerpt,
+  } = post;
 
   return (
     <section className="pt-[150px] pb-[120px]">
@@ -138,7 +153,7 @@ const BlogDetailsPage = async ({
                 <div className="relative aspect-97/60 w-full sm:aspect-97/44">
                   <Image
                     src={mainImage}
-                    alt={title}
+                    alt={mainImageAlt || title}
                     fill
                     className="object-cover object-center"
                   />

@@ -55,7 +55,7 @@ const Header = () => {
         {/* Right: CTA + mobile toggle */}
         <div className="flex items-center gap-3">
           <Link
-            href="/#contact"
+            href="/marcar-consulta"
             className="hidden rounded-full bg-[#E6CFB8] px-5 py-2 text-sm text-[#2D352C] transition hover:bg-[#E6E1D2] md:block"
           >
             Marcar Consulta
@@ -108,7 +108,7 @@ const Header = () => {
             </Link>
           ))}
           <Link
-            href="/#contact"
+            href="/marcar-consulta"
             onClick={() => setNavbarOpen(false)}
             className="mt-2 rounded-full bg-[#E6CFB8] px-5 py-3 text-center text-sm text-[#2D352C] transition hover:bg-[#E6E1D2]"
           >

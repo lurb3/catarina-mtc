@@ -7,9 +7,10 @@ import { BlogPost } from "@/types/blog";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Medicina Tradicional Chinesa",
+  title: "Blog de Medicina Tradicional Chinesa",
   description:
     "Artigos sobre acupunctura, fitoterapia chinesa e hábitos de saúde para o seu bem-estar.",
+  alternates: { canonical: "/blog" },
 };
 
 export const revalidate = 60;
@@ -30,13 +31,6 @@ const BlogPage = async () => {
             <div className="text-[#4B544A] mx-auto max-w-2xl text-center">
               <p className="text-lg">
                 Ainda não há artigos publicados. Volte em breve!
-              </p>
-              <p className="mt-2 text-sm">
-                (Os artigos são geridos no Sanity Studio em{" "}
-                <code className="bg-[#2D352C]/10 text-[#2D352C] rounded px-1.5 py-0.5">
-                  /studio
-                </code>
-                .)
               </p>
             </div>
           ) : (

@@ -4,18 +4,17 @@ import Link from "next/link";
 const AboutSectionTwo = () => {
   return (
     <section
-      id="about"
+      id="sobre"
       className="bg-[#2D352C] px-6 py-28 text-[#E6E1D2] md:px-12"
     >
       <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-2 lg:items-center">
         <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
           <Image
-            src="/images/catarina-abreu-mtc.jpeg"
-            alt="Catarina Abreu"
+            src="/images/catarina-abreu-consultorio-mtc.jpg"
+            alt="Catarina Abreu, especialista em Medicina Tradicional Chinesa, consultório"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
-            unoptimized
+            className="object-cover object-top"
           />
         </div>
         <div>
@@ -27,10 +26,11 @@ const AboutSectionTwo = () => {
             deles.
           </h2>
           <p className="mb-6 text-lg leading-relaxed text-[#B5BFAB]">
-            Há mais de [X] anos que acompanho pessoas no caminho da saúde
-            integrativa. A minha abordagem combina o diagnóstico tradicional
-            da MTC com escuta atenta — porque cada corpo conta uma história
-            diferente.
+            Sou especialista em Medicina Tradicional Chinesa e Fitoterapia,
+            com cédula profissional reconhecida pela ACSS. Os meus próprios
+            desafios de saúde trouxeram-me até aqui — e hoje uno o rigor da
+            investigação científica à escuta atenta, porque cada corpo conta
+            uma história diferente.
           </p>
           <ul className="mb-10 space-y-3 text-[#E6E1D2]">
             <li className="flex items-start gap-3">

@@ -24,13 +24,13 @@ const BlogPostingJsonLd = ({ post, slug }: Props) => {
         ...(post.mainImage && { image: post.mainImage }),
         ...(post.publishedAt && {
           datePublished: post.publishedAt,
-          dateModified: post.publishedAt,
+          dateModified: post._updatedAt ?? post.publishedAt,
         }),
         author: {
           "@type": "Person",
           "@id": "https://catarinaabreumtc.com/#catarina",
           name: post.author?.name ?? "Catarina Abreu",
-          url: "https://catarinaabreumtc.com/about",
+          url: "https://catarinaabreumtc.com/perfil-clinico",
         },
         publisher: {
           "@type": "Organization",

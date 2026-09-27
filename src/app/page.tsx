@@ -4,13 +4,15 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import MedicalBusinessJsonLd from "@/components/JsonLd/MedicalBusinessJsonLd";
+import Locations from "@/components/Locations";
 import Treatments from "@/components/Treatments";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Catarina Abreu | Medicina Tradicional Chinesa",
+  title: "Catarina Abreu | Medicina Tradicional Chinesa em Gondomar",
   description:
-    "Consultas de Medicina Tradicional Chinesa: acupunctura, fitoterapia, Tui Ná, moxabustão e ventosas",
+    "Consultas de Medicina Tradicional Chinesa em Gondomar (Fânzeres) e Santa Maria da Feira: acupunctura, fitoterapia, Tui Ná, moxabustão e ventosas.",
+  alternates: { canonical: "/" },
 };
 
 const isProduction = process.env.VERCEL_ENV === "production";
@@ -40,6 +42,7 @@ export default function Home() {
       <AboutSectionOne />
       <Treatments />
       <AboutSectionTwo />
+      <Locations />
       <Contact />
     </>
   );

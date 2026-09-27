@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 type FormState = "idle" | "loading" | "success" | "error";
@@ -9,11 +10,21 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [phone, setPhone] = useState("");
+  const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<FormState>("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!consent) {
+      setErrorMsg(
+        "Para enviar o pedido, aceite o tratamento dos seus dados pessoais.",
+      );
+      setStatus("error");
+      return;
+    }
+
     setStatus("loading");
     setErrorMsg("");
 
@@ -21,7 +32,7 @@ const Contact = () => {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, message }),
+        body: JSON.stringify({ name, email, phone, message, consent }),
       });
 
       if (res.ok) {
@@ -30,6 +41,7 @@ const Contact = () => {
         setEmail("");
         setMessage("");
         setPhone("");
+        setConsent(false);
       } else {
         const data = await res.json();
         setErrorMsg(data.error || "Ocorreu um erro. Tente novamente.");
@@ -43,7 +55,7 @@ const Contact = () => {
 
   return (
     <section
-      id="contact"
+      id="contacto"
       className="relative overflow-hidden bg-[#C7CFC0] px-6 py-32 md:px-12"
     >
       <div className="mx-auto max-w-2xl text-center">
@@ -98,7 +110,8 @@ const Contact = () => {
               </label>
               <input
                 id="phone"
-                type="number"
+                type="tel"
+                autoComplete="tel"
                 required
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -142,6 +155,29 @@ const Contact = () => {
                 className="w-full resize-none rounded-xl border border-[#B0BAA8] bg-[#D8DFD1] px-5 py-4 text-[#2D352C] placeholder-[#9AA392] outline-none transition focus:border-[#2D352C] focus:ring-2 focus:ring-[#2D352C]/20"
               />
             </div>
+
+            <label className="flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-[#4B544A]">
+              <input
+                type="checkbox"
+                required
+                checked={consent}
+                onChange={(e) => setConsent(e.target.checked)}
+                className="mt-1 h-4 w-4 shrink-0 cursor-pointer accent-[#2D352C]"
+              />
+              <span>
+                Autorizo o tratamento dos meus dados pessoais, incluindo
+                informação de saúde que partilhe nesta mensagem, para efeitos de
+                resposta ao meu pedido de contacto, nos termos da{" "}
+                <Link
+                  href="/privacidade"
+                  target="_blank"
+                  className="text-[#2D352C] underline underline-offset-4"
+                >
+                  Política de Privacidade
+                </Link>
+                .
+              </span>
+            </label>
 
             {status === "error" && (
               <p className="text-sm text-red-700">{errorMsg}</p>

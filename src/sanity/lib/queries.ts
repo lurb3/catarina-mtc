@@ -7,6 +7,7 @@ export const POSTS_QUERY = groq`
     "slug": slug.current,
     excerpt,
     "mainImage": mainImage.asset->url,
+    "mainImageAlt": mainImage.alt,
     publishedAt,
     "categories": categories[]->{_id, title, "slug": slug.current},
     "author": author->{name, "image": image.asset->url, role}
@@ -20,6 +21,7 @@ export const POSTS_HOME_QUERY = groq`
     "slug": slug.current,
     excerpt,
     "mainImage": mainImage.asset->url,
+    "mainImageAlt": mainImage.alt,
     publishedAt,
     "categories": categories[]->{_id, title, "slug": slug.current},
     "author": author->{name, "image": image.asset->url, role}
@@ -33,8 +35,10 @@ export const POST_QUERY = groq`
     "slug": slug.current,
     excerpt,
     "mainImage": mainImage.asset->url,
+    "mainImageAlt": mainImage.alt,
     body,
     publishedAt,
+    _updatedAt,
     "categories": categories[]->{_id, title, "slug": slug.current},
     "author": author->{name, "image": image.asset->url, role, bio}
   }
@@ -42,4 +46,11 @@ export const POST_QUERY = groq`
 
 export const POSTS_SLUGS_QUERY = groq`
   *[_type == "post" && defined(slug.current)][].slug.current
+`;
+
+export const POSTS_SITEMAP_QUERY = groq`
+  *[_type == "post" && defined(slug.current)] {
+    "slug": slug.current,
+    _updatedAt
+  }
 `;

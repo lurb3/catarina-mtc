@@ -12,6 +12,7 @@ const SingleTreatment = ({ treatment }: { treatment: Treatment }) => {
             src={image}
             alt={title}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
             className="object-cover transition duration-700 group-hover:scale-105"
           />
         ) : (

@@ -3,8 +3,9 @@ import CookiesPolicy from "@/components/Cookies/CookiesPolicy";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Política de Cookies | Catarina Abreu",
+  title: "Política de Cookies",
   description: "Informações sobre como utilizamos cookies neste website.",
+  alternates: { canonical: "/cookies" },
 };
 
 const CookiesPage = () => {

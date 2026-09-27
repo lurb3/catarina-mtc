@@ -3,8 +3,10 @@ import PrivacyPolicy from "@/components/Privacy/PrivacyPolicy";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidade | Catarina Abreu",
-  description: "Leia nossa política de privacidade para entender como protegemos seus dados pessoais.",
+  title: "Política de Privacidade",
+  description:
+    "Leia a nossa política de privacidade para entender como protegemos os seus dados pessoais.",
+  alternates: { canonical: "/privacidade" },
 };
 
 const PrivacyPage = () => {

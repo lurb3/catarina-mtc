@@ -5,7 +5,7 @@ import treatmentsData from "./treatmentsData";
 const Treatments = () => {
   return (
     <section
-      id="treatments"
+      id="tratamentos"
       className="bg-[#6C7463] px-6 py-28 md:px-12"
     >
       <div className="mx-auto max-w-7xl">

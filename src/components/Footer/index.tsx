@@ -1,4 +1,6 @@
 "use client";
+import { OPENING_HOURS } from "@/config/business";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -11,19 +13,18 @@ const Footer = () => {
   return (
     <footer className="bg-[#1F2620] px-6 pt-20 pb-10 text-[#B5BFAB] md:px-12">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand */}
-          <div className="lg:col-span-2 lg:max-w-sm">
+          <div className="lg:col-span-2">
             <Link
               href="/"
               className="mb-6 inline-block font-serif text-2xl text-[#E6E1D2]"
             >
-              Catarina Abreu
+              Catarina Abreu - Especialista em Medicina Tradicional Chinesa
             </Link>
             <p className="mb-8 text-sm leading-relaxed text-[#959D8D]">
-              Consultório de Medicina Tradicional Chinesa
-              Acupunctura, fitoterapia e terapias holísticas para o seu
-              bem-estar
+              Espaço de Saúde e Bem-Estar | Medicina Tradicional Chinesa <br />
+              Acupunctura • Fitoterapia • Terapias Complementares
             </p>
             <div className="flex items-center gap-4">
               <SocialLink href="https://www.instagram.com/catarinaabreumtc" label="Instagram">
@@ -60,17 +61,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Licenças e Cédulas */}
-          <div>
-            <h3 className="mb-6 text-xs uppercase tracking-[0.25em] text-[#E6CFB8]">
-              Licenças e Cédulas
-            </h3>
-            <ul className="space-y-3 text-sm">
-            <p className="text-sm leading-relaxed text-[#959D8D]">Especialista de Medicina Tradicional Chinesa - C0062366</p>
-            <p className="text-sm leading-relaxed text-[#959D8D]">Especialista de Fitoterapia - C0040836</p>
-            </ul>
-          </div>
-
           {/* Contactos */}
           <div>
             <h3 className="mb-6 text-xs uppercase tracking-[0.25em] text-[#E6CFB8]">
@@ -79,11 +69,26 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href="tel:+351000000000"
+                  href="https://www.google.com/maps/search/?api=1&query=R.+do+Repel%C3%A3o+370%2C+4510-649+F%C3%A2nzeres"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-[#B5BFAB] transition hover:text-[#E6CFB8]"
                 >
-                  918 844 601
+                  R. do Repelão 370, Loja 15
+                  <br />
+                  4510-649 Fânzeres, Gondomar
                 </a>
+              </li>
+              <li>{OPENING_HOURS.label}</li>
+              <li>
+                <a
+                  href="tel:+351918844601"
+                  className="text-[#B5BFAB] transition hover:text-[#E6CFB8]"
+                >
+                  (+351) 918 844 601
+                </a>
+                <br />
+                (Chamada para a rede móvel nacional)
               </li>
               <li>
                 <a
@@ -94,6 +99,44 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+          </div>
+
+          {/* Licenças e Cédulas */}
+          <div>
+            <h3 className="mb-6 text-xs uppercase tracking-[0.25em] text-[#E6CFB8]">
+              Licenças e Cédulas
+            </h3>
+            <ul className="space-y-3 text-sm">
+            <p className="text-sm leading-relaxed text-[#959D8D]">Especialista de Medicina Tradicional Chinesa - C0062366</p>
+            <p className="text-sm leading-relaxed text-[#959D8D]">Especialista de Fitoterapia - C0040836</p>
+            <p className="text-sm leading-relaxed text-[#959D8D]">Licença ERS - E182343</p>
+            </ul>
+          </div>
+
+          {/* ERS */}
+          <div className="lg:flex lg:items-start lg:justify-end">
+            <div className="flex w-[216px] flex-col items-center rounded-xl bg-[#E6E1D2] p-2 pb-4">
+              <a
+                href="https://www.ers.pt"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Entidade Reguladora da Saúde"
+                className="transition hover:opacity-90 mb-5"
+              >
+                <Image
+                  src="/images/entidade_reguladora_saude.png"
+                  alt="Entidade Reguladora da Saúde (ERS)"
+                  width={200}
+                  height={106}
+                />
+              </a>
+              <Image
+                src="/images/ers_informacoes.png"
+                alt="Código QR com informações da Entidade Reguladora da Saúde"
+                width={140}
+                height={138}
+              />
+            </div>
           </div>
         </div>
 

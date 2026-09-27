@@ -22,13 +22,13 @@ const Hero = () => {
             </h1>
             <div className="flex flex-wrap items-center gap-4">
               <Link
-                href="#contact"
+                href="/marcar-consulta"
                 className="rounded-full bg-[#2D352C] px-8 py-4 text-base text-[#E6E1D2] transition hover:bg-[#4B544A]"
               >
                 Marcar Consulta
               </Link>
               <Link
-                href="#treatments"
+                href="#tratamentos"
                 className="rounded-full border border-[#2D352C]/40 px-8 py-4 text-base text-[#2D352C] transition hover:border-[#2D352C]"
               >
                 Ver Tratamentos
@@ -59,10 +59,11 @@ const Hero = () => {
             >
               <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=200&q=80"
-                  alt=""
+                  src="/images/catarina-abreu-especialista-mtc.jpg"
+                  alt="Catarina Abreu, especialista em Medicina Tradicional Chinesa"
                   fill
-                  className="object-cover"
+                  sizes="64px"
+                  className="object-cover object-[50%_18%]"
                 />
               </div>
               <div>

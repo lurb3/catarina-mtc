@@ -3,13 +3,14 @@ import Image from "next/image";
 const AboutSectionOne = () => {
   return (
     <section
-      id="philosophy"
+      id="filosofia"
       className="relative overflow-hidden px-6 py-32 text-[#E6E1D2] md:px-12"
     >
       <Image
-        src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1920&q=80"
+        src="/images/arvore-luz-solar.jpg"
         alt=""
         fill
+        sizes="100vw"
         className="object-cover"
       />
       <div className="absolute inset-0 bg-[#1F2620]/90" />

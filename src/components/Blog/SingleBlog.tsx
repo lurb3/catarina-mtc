@@ -12,8 +12,16 @@ const formatDate = (iso?: string) =>
     : "";
 
 const SingleBlog = ({ blog }: { blog: BlogPost }) => {
-  const { title, slug, mainImage, excerpt, author, categories, publishedAt } =
-    blog;
+  const {
+    title,
+    slug,
+    mainImage,
+    mainImageAlt,
+    excerpt,
+    author,
+    categories,
+    publishedAt,
+  } = blog;
   const href = `/blog/${slug}`;
   const primaryCategory = categories?.[0]?.title;
 
@@ -26,7 +34,7 @@ const SingleBlog = ({ blog }: { blog: BlogPost }) => {
           </span>
         )}
         {mainImage ? (
-          <Image src={mainImage} alt={title} fill className="object-cover" />
+          <Image src={mainImage} alt={mainImageAlt || title} fill className="object-cover" />
         ) : (
           <div className="bg-[#6C7463]/10 absolute inset-0" />
         )}
