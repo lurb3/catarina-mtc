@@ -1,4 +1,5 @@
 "use client";
+import { resetConsent } from "@/components/CookieConsent/consent";
 import { OPENING_HOURS } from "@/config/business";
 import Image from "next/image";
 import Link from "next/link";
@@ -156,6 +157,13 @@ const Footer = () => {
             <Link href="/cookies" className="transition hover:text-[#E6CFB8]">
               Cookies
             </Link>
+            <button
+              type="button"
+              onClick={resetConsent}
+              className="cursor-pointer transition hover:text-[#E6CFB8]"
+            >
+              Preferências de cookies
+            </button>
           </div>
         </div>
       </div>

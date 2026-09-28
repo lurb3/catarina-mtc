@@ -56,6 +56,9 @@ const CookiesPolicy = () => {
             <p className="leading-relaxed text-[#4B544A]">
               Em casos especiais, e mediante o consentimento prévio do utilizador, são usados cookies fornecidos por terceiros de confiança. Este site pode usar o Google Analytics, para ajudar a entender como o utilizador usa o site e como podemos melhorar a sua experiência. Estes cookies podem registar dados como o tempo despendido nas páginas visitadas. Para mais informações sobre os cookies do Google Analytics, consulte a página oficial do Google Analytics.
             </p>
+            <p className="mt-4 leading-relaxed text-[#4B544A]">
+              O site utiliza também o Vercel Analytics, que mede visitas de forma anónima e agregada, sem recorrer a cookies nem identificar o utilizador. O sistema de marcação online (Cal.com) pode instalar os seus próprios cookies quando é aberto, necessários ao funcionamento do agendamento.
+            </p>
           </div>
 
           <div className="mb-8">

@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Inter } from "next/font/google";
 import { Metadata } from "next";
 import "../styles/index.css";
+import CookieConsent from "@/components/CookieConsent";
 import { Shell } from "./shell";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -46,6 +47,7 @@ export default function RootLayout({
       <head />
       <body className={`bg-[#C7CFC0] ${inter.className}`}>
         <Shell>{children}</Shell>
+        <CookieConsent />
         <Analytics />
       </body>
     </html>
