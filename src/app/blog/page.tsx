@@ -9,7 +9,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog de Medicina Tradicional Chinesa",
   description:
-    "Artigos sobre acupunctura, fitoterapia chinesa e hábitos de saúde para o seu bem-estar.",
+    "Artigos sobre acupuntura, fitoterapia chinesa e hábitos de saúde para o seu bem-estar.",
   alternates: { canonical: "/blog" },
 };
 

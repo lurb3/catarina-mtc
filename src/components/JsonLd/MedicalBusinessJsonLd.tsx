@@ -28,7 +28,7 @@ const MedicalBusinessJsonLd = () => {
         logo: "https://catarinaabreumtc.com/images/logo/logo.svg",
         image: "https://catarinaabreumtc.com/images/catarina-abreu-mtc.jpeg",
         description:
-          "Consultas de Medicina Tradicional Chinesa: acupunctura, fitoterapia, Tui Ná, moxabustão e ventosas.",
+          "Consultas de Medicina Tradicional Chinesa: acupuntura, fitoterapia, Tui Na, moxabustão e ventosas.",
         telephone: "+351918844601",
         email: "catarinaabreumtc@gmail.com",
         address: {
@@ -89,10 +89,11 @@ const MedicalBusinessJsonLd = () => {
         ],
         knowsAbout: [
           "Medicina Tradicional Chinesa",
-          "Acupunctura",
+          "Acupuntura",
           "Fitoterapia",
           "Moxabustão",
           "Ventosaterapia",
+          "Tui Na",
         ],
         hasCredential: [
           {

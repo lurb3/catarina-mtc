@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Catarina Abreu — MTC",
   },
   description:
-    "Consultas de Medicina Tradicional Chinesa em Fânzeres, Gondomar: acupunctura, fitoterapia, Tui Ná, moxabustão e ventosas.",
+    "Consultas de Medicina Tradicional Chinesa em Fânzeres, Gondomar: acupuntura, fitoterapia, Tui Na, moxabustão e ventosas.",
   openGraph: {
     siteName: "Catarina Abreu — MTC",
     locale: "pt_PT",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Catarina Abreu | Medicina Tradicional Chinesa",
     description:
-      "Consultas de Medicina Tradicional Chinesa em Fânzeres, Gondomar: acupunctura, fitoterapia, Tui Ná, moxabustão e ventosas.",
+      "Consultas de Medicina Tradicional Chinesa em Fânzeres, Gondomar: acupuntura, fitoterapia, Tui Na, moxabustão e ventosas.",
     images: ["/images/og-default.jpg"],
   },
 };

@@ -75,13 +75,50 @@ const PrivacyPolicy = () => {
               <li className="list-disc">Nome e morada postal</li>
               <li className="list-disc">Endereços de correio eletrónico e números de contacto</li>
               <li className="list-disc">Documento de identificação fiscal</li>
-              <li className="list-disc">Dados sobre visitas ao website</li>
+              <li className="list-disc">Dados de marcação (data, hora, tipo e local da consulta)</li>
+              <li className="list-disc"><strong>Dados de saúde</strong> que partilhe voluntariamente através do formulário de contacto, da marcação ou durante a consulta</li>
+              <li className="list-disc">Dados estatísticos e anónimos sobre visitas ao website</li>
             </ul>
+          </div>
+
+          <div className="mb-8">
+            <h3 className="mb-4 text-lg font-semibold text-[#2D352C]">
+              7. Finalidades e Fundamento Legal
+            </h3>
+            <p className="mb-4 leading-relaxed text-[#4B544A]">
+              Os dados pessoais são tratados para as seguintes finalidades:
+            </p>
+            <ul className="space-y-2 pl-6 text-[#4B544A]">
+              <li className="list-disc"><strong>Resposta a pedidos de contacto:</strong> com base no seu consentimento, prestado no formulário de contacto (art. 6.º, n.º 1, alínea a) do RGPD). Os dados de saúde que partilhe são tratados com base no seu consentimento explícito (art. 9.º, n.º 2, alínea a) do RGPD).</li>
+              <li className="list-disc"><strong>Gestão de marcações:</strong> para agendar, confirmar, alterar ou cancelar consultas, como diligência necessária à prestação do serviço que solicitou (art. 6.º, n.º 1, alínea b) do RGPD).</li>
+              <li className="list-disc"><strong>Prestação de cuidados de saúde:</strong> avaliação, tratamento e registo clínico, realizados por profissional sujeito a sigilo profissional (art. 9.º, n.º 2, alínea h) do RGPD).</li>
+              <li className="list-disc"><strong>Faturação:</strong> emissão de faturas e recibos, para cumprimento de obrigações legais (art. 6.º, n.º 1, alínea c) do RGPD).</li>
+              <li className="list-disc"><strong>Estatísticas do website:</strong> medição anónima e agregada de visitas, sem utilização de cookies, com base no interesse legítimo em melhorar o website (art. 6.º, n.º 1, alínea f) do RGPD).</li>
+            </ul>
+          </div>
+
+          <div className="mb-8">
+            <h3 className="mb-4 text-lg font-semibold text-[#2D352C]">
+              8. Partilha de Dados e Subcontratantes
+            </h3>
+            <p className="mb-4 leading-relaxed text-[#4B544A]">
+              Os seus dados não são vendidos nem cedidos a terceiros para fins comerciais. Para o funcionamento do website e dos serviços, recorremos às seguintes entidades, que tratam os dados apenas na medida do necessário e de acordo com as nossas instruções:
+            </p>
+            <ul className="space-y-2 pl-6 text-[#4B544A]">
+              <li className="list-disc"><strong>Vercel Inc.</strong> — alojamento do website e estatísticas anónimas de visitas.</li>
+              <li className="list-disc"><strong>Resend Inc.</strong> — envio das mensagens submetidas através do formulário de contacto.</li>
+              <li className="list-disc"><strong>Google LLC (Gmail)</strong> — receção e gestão do correio eletrónico.</li>
+              <li className="list-disc"><strong>Cal.com Inc.</strong> — sistema de marcação online de consultas.</li>
+              <li className="list-disc"><strong>WhatsApp (Meta Platforms Ireland Ltd.)</strong> — comunicação com o utente, quando este opta por este canal.</li>
+            </ul>
+            <p className="mt-4 leading-relaxed text-[#4B544A]">
+              Algumas destas entidades podem tratar dados fora do Espaço Económico Europeu, nomeadamente nos Estados Unidos. Nesses casos, a transferência é assegurada pelo Quadro de Privacidade de Dados UE-EUA (EU-US Data Privacy Framework) ou por cláusulas contratuais-tipo aprovadas pela Comissão Europeia.
+            </p>
           </div>
 
           <div className="mb-12">
             <h3 className="mb-4 text-lg font-semibold text-[#2D352C]">
-              7. Contacto
+              9. Contacto
             </h3>
             <p className="leading-relaxed text-[#4B544A]">
               Para exercer os seus direitos ou esclarecer dúvidas, contacte{" "}

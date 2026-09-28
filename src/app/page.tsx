@@ -11,29 +11,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Catarina Abreu | Medicina Tradicional Chinesa em Gondomar",
   description:
-    "Consultas de Medicina Tradicional Chinesa em Gondomar (Fânzeres) e Santa Maria da Feira: acupunctura, fitoterapia, Tui Ná, moxabustão e ventosas.",
+    "Consultas de Medicina Tradicional Chinesa em Gondomar (Fânzeres) e Santa Maria da Feira: acupuntura, fitoterapia, Tui Na, moxabustão e ventosas.",
   alternates: { canonical: "/" },
 };
 
-const isProduction = process.env.VERCEL_ENV === "production";
-
 export default function Home() {
-  if (isProduction) {
-    return (
-      <main className="flex min-h-screen flex-col items-center justify-center bg-[#2D352C] px-4 text-[#E6E1D2]">
-        <div className="text-center">
-          <h1 className="mb-4 font-serif text-4xl">Em Construção</h1>
-          <p className="mb-8 text-lg text-[#B5BFAB]">
-            O website está a ser preparado.
-          </p>
-          <p className="mt-8 text-sm text-[#959D8D]">
-            Medicina Tradicional Chinesa
-          </p>
-        </div>
-      </main>
-    );
-  }
-
   return (
     <>
       <MedicalBusinessJsonLd />

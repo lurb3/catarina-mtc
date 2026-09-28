@@ -44,6 +44,7 @@ const pricingGroups = [
     id: "online",
     title: "Consultas Online",
     subtitle: "Por videochamada, onde estiver",
+    note: "Nota: Abrange apenas Dietoterapia, Fitoterapia e Estilo de Vida.",
     items: [
       {
         id: 1,
@@ -75,6 +76,7 @@ const pricingGroups = [
     id: "presencial",
     title: "Consultas Presenciais",
     subtitle: "Espaço Blume — Fânzeres, Gondomar",
+    note: "",
     items: [
       {
         id: 1,
@@ -90,6 +92,32 @@ const pricingGroups = [
         detail: "Avaliação e tratamento",
         duration: "Até 1h de duração",
         price: "30 €",
+        note: "",
+      },
+    ],
+  },
+  {
+    id: "fisiosouto",
+    title: "",
+    subtitle: "FisioSouto — Santa Maria da Feira",
+    note: "",
+    // Shown instead of the price when an item has none
+    bookingInfo: "Marcação junto da clínica",
+    items: [
+      {
+        id: 1,
+        label: "1ª Consulta",
+        detail: "Avaliação inicial",
+        duration: "",
+        price: "",
+        note: "",
+      },
+      {
+        id: 2,
+        label: "Consulta de Seguimento",
+        detail: "Avaliação e tratamento",
+        duration: "",
+        price: "",
         note: "",
       },
     ],
@@ -112,8 +140,8 @@ const bookingPolicy = [
     text: "Qualquer pedido de cancelamento ou remarcação deve ser comunicado com, pelo menos, 24 horas de antecedência.",
   },
   {
-    title: "Canais Oficiais",
-    text: "Todos os agendamentos, dúvidas ou alterações devem ser tratados exclusivamente através do WhatsApp ou telemóvel. Não são consideradas válidas mensagens enviadas através de redes sociais pessoais.",
+    title: "Canais de Atendimento e Marcações",
+    text: "Novas Marcações: Devem ser feitas preferencialmente através do nosso site.\n\nHorários Especiais: Caso não encontre disponibilidade no site (por exemplo, pedidos fora do horário de funcionamento), entrar em contacto por WhatsApp ou telemóvel.\n\nDúvidas, Alterações ou Cancelamentos: Devem ser tratados exclusivamente via WhatsApp ou telemóvel.\n\nNota: Mensagens enviadas através de redes sociais pessoais não serão consideradas válidas para marcações ou gestão de agendamentos.",
   },
 ];
 
@@ -203,7 +231,14 @@ export default function ConsultationsPage() {
                 <h3 className="mb-1 font-serif text-2xl text-[#E6E1D2] md:text-3xl">
                   {group.title}
                 </h3>
-                <p className="mb-8 text-md text-[#E6CFB8]">{group.subtitle}</p>
+                <p
+                  className={`text-xl text-[#E6CFB8] ${group.note ? "mb-2" : "mb-8"}`}
+                >
+                  {group.subtitle}
+                </p>
+                {group.note && (
+                  <p className="mb-8 text-sm text-[#E6E1D2]">{group.note}</p>
+                )}
 
                 <div className="grid gap-6 md:grid-cols-3">
                   {group.items.map((item) => (
@@ -218,9 +253,15 @@ export default function ConsultationsPage() {
                       <p className="mb-6 text-sm text-[#959D8D]">
                         {item.duration}
                       </p>
-                      <p className="mb-2 font-serif text-4xl text-[#E6CFB8]">
-                        {item.price}
-                      </p>
+                      {item.price ? (
+                        <p className="mb-2 font-serif text-4xl text-[#E6CFB8]">
+                          {item.price}
+                        </p>
+                      ) : (
+                        <p className="mb-2 font-serif text-xl italic text-[#E6CFB8]">
+                          {group.bookingInfo}
+                        </p>
+                      )}
                       {item.note && (
                         <p className="text-xs text-[#959D8D]">{item.note}</p>
                       )}
@@ -249,7 +290,7 @@ export default function ConsultationsPage() {
                   <dt className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-[#E6CFB8]">
                     {rule.title}
                   </dt>
-                  <dd className="text-base leading-relaxed text-[#E6E1D2]">
+                  <dd className="whitespace-pre-line text-base leading-relaxed text-[#E6E1D2]">
                     {rule.text}
                   </dd>
                 </div>

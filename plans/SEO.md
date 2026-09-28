@@ -23,7 +23,7 @@ Last reviewed: 2026-09-27.
 
 ## 1. Launch blockers (code)
 
-- [ ] **Launch gate lives in 3 places** — remove all together at launch:
+- [x] **Launch gate lives in 3 places** (removed at go-live) — remove all together at launch:
   - `src/app/page.tsx` ("Em Construção" when `VERCEL_ENV === "production"`)
   - `src/app/shell.tsx` (hides Header/Footer/ScrollToTop)
   - `src/middleware.ts` — redirects every non-home **page** to `/` on any non-localhost host (incl. Vercel previews). Static files (`/images/*`, `robots.txt`, `sitemap.xml`) are now excluded from the matcher. Delete the file at launch.
@@ -44,14 +44,14 @@ Last reviewed: 2026-09-27.
   - [x] Home title/description, `/consultas` title/description, footer address, "Onde Consulto" section (H2), JSON-LD address + geo + `areaServed`.
   - [ ] Hero area (eyebrow/intro text above the fold).
   - [ ] Treatment pages and blog posts: mention the locations naturally where relevant.
-- [ ] **Treatment list consistency** — site description mentions Tui Ná and ventosas; treatment cards now list Acupunctura, Fitoterapia, Moxabustão, Ventosaterapia (Auriculoterapia removed). Remaining: confirm Tui Ná — it is still in the meta descriptions but has no card.
+- [x] **Treatment list consistency** — cards: Acupuntura, Dietoterapia e Fitoterapia, Moxabustão, Ventosaterapia, Tui Na. Spellings standardised site-wide to "Acupuntura" and "Tui Na" (meta, JSON-LD, FAQ, footer, OG image).
 - [ ] **Images** — replace Unsplash stock (Hero photo is labelled "Catarina Abreu" but isn't her) with real photos + descriptive alt text. ~~Remove `unoptimized` from the real photo~~ (done — root cause was the middleware redirecting the image optimizer).
 - [ ] **Internal linking** — treatment cards → treatment pages; blog posts → relevant treatment + booking; treatment pages → `/consultas` prices.
 
 ## 3. Content that ranks (highest long-term impact)
 
-- [ ] **One page per treatment** — `/tratamentos/acupunctura`, `/tratamentos/fitoterapia`, `/tratamentos/moxabustao`, `/tratamentos/ventosaterapia` (+ others confirmed). Each: what it is, what it helps with, what a session looks like, duration, price, FAQ, booking CTA, `Service`/`MedicalTherapy` JSON-LD. Consider managing them in Sanity.
-- [ ] **Condition content** (blog or pages) — "acupunctura para ansiedade", "insónia", "dor lombar", "enxaqueca", etc. Careful, compliant wording (see §6).
+- [ ] **One page per treatment** — `/tratamentos/acupuntura`, `/tratamentos/fitoterapia`, `/tratamentos/moxabustao`, `/tratamentos/ventosaterapia` (+ others confirmed). Each: what it is, what it helps with, what a session looks like, duration, price, FAQ, booking CTA, `Service`/`MedicalTherapy` JSON-LD. Consider managing them in Sanity.
+- [ ] **Condition content** (blog or pages) — "acupuntura para ansiedade", "insónia", "dor lombar", "enxaqueca", etc. Careful, compliant wording (see §6).
 - [ ] **Blog launch set** — 5–6 in-depth articles answering real patient questions before launch; then a steady cadence (e.g. 2/month).
 - [ ] **Testimonials section** (planned in `PLAN.md`) — only if permitted by health advertising rules (see §6).
 - [x] **FAQ schema** — dedicated `/faq` page with `FAQPage` JSON-LD (moved from `/consultas`) (limited Google rich results today, still useful for AI assistants).

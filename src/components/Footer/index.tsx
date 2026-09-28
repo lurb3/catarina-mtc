@@ -24,7 +24,7 @@ const Footer = () => {
             </Link>
             <p className="mb-8 text-sm leading-relaxed text-[#959D8D]">
               Espaço de Saúde e Bem-Estar | Medicina Tradicional Chinesa <br />
-              Acupunctura • Fitoterapia • Terapias Complementares
+              Acupuntura • Fitoterapia • Terapias Complementares
             </p>
             <div className="flex items-center gap-4">
               <SocialLink href="https://www.instagram.com/catarinaabreumtc" label="Instagram">
