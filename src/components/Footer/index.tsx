@@ -156,9 +156,6 @@ const Footer = () => {
             <Link href="/cookies" className="transition hover:text-[#E6CFB8]">
               Cookies
             </Link>
-            <Link href="/" className="transition hover:text-[#E6CFB8]">
-              Termos
-            </Link>
           </div>
         </div>
       </div>

@@ -44,10 +44,11 @@ const Hero = () => {
 
             <div className="relative aspect-[4/5] overflow-hidden rounded-t-[200px] rounded-b-3xl">
               <Image
-                src="https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&w=1200&q=80"
-                alt="Catarina Abreu - Terapeuta de MTC"
+                src="/images/tratamento-medicina-tradicional-chinesa.jpg"
+                alt="Terapeuta a avaliar o braço de uma paciente durante uma sessão de Medicina Tradicional Chinesa"
                 fill
-                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-[50%_55%]"
                 priority
               />
             </div>
